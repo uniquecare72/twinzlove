@@ -1,0 +1,237 @@
+:root{
+    --blue :rgb(115, 156, 245);
+    --black:rgb(15, 15, 15);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./bk2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 230px 40px 230px;
+    /* background: rgb(0, 0, 0); */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-con{
+    
+    /* background-color: black; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 90;
+    display: flex;
+    padding: 20px 230px 0 230px;
+    left: 0;
+    align-items: center;  
+}                                                     
+.nav-icon{
+    width: 30px;
+    height: 30px;
+    display: none;
+    background-color: white;
+    padding: 5px;
+}
+
+.logo{
+    /* display: inline-block; */
+    width: 20%;
+    text-decoration: none;
+}
+.logo .left{
+    font-size: 35px;
+    color: white;
+    font-weight: 700;
+}
+.logo .right{
+    font-size: 25px;
+    color: rgb(245, 188, 45);
+    font-weight: 600;
+}
+.logo .dot{
+    font-size: 35px;
+    color:white;
+    font-weight: 600;
+}
+.logo{
+    letter-spacing: 1px;
+}
+.left-nav .active{
+    color: var(--blue);
+    /* text-decoration-line: underline; */
+    padding: 12px;
+    font-weight: 600;
+    background: transparent;
+    transition: .7s;
+    border-bottom: 2px solid var(--blue);
+ }
+.left-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 550;
+    background: transparent;
+    transition: .7s;
+}
+.left-nav a:hover{
+    /* text-decoration-line: underline; */
+    color: var(--blue);
+    box-shadow: 0 3px 1px var(--blue);
+}
+.right-nav a{
+    color: var(--blue);
+    margin-left: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--blue);
+    transition: 0.7s;
+}
+.right-nav a:hover{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+}
+.right-nav .me{
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border-bottom: none;
+    margin-left: 30px;
+}
+.right-nav .me:hover{
+    background: var(--blue);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border-bottom: none;
+}
+.nav-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.con{
+    width: 100%;
+    margin-top: 100px;
+    /* display: grid;
+    grid-template-columns: 40% 60%; */
+    display: flex;
+    justify-content: space-between;
+}
+.left-bio{
+    background: url(./bk.jpeg);
+    background-repeat: no-repeat;
+    /* max-width: 58%; */
+    font-size: 25px;
+    padding: 10px;
+    border: none;
+    transition: 4s;
+    animation-name:bio ;
+    animation-delay: 2s;
+    animation-duration: 2s;
+}
+.top{
+    letter-spacing: 4px;
+}
+.name{
+    color: rgb(245, 188, 45);
+    /* word-spacing: 5px; */
+    letter-spacing: 2px;
+}
+.skill-desc{
+    color: var(--blue);
+}
+.bio-desc{
+    margin-top: 20px;
+    width: 90%;
+    text-align: justify;
+}
+.social{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.right-bio{
+    width: 25%;
+    height: 500px;
+    background: var(--blue);
+    border-radius: 20px;
+}
+
+@keyframes bio{
+    0%{}
+    50%{
+        scale: 0.5;
+        transform: rotate(360deg);
+    }
+    100%{
+        transition: 4s;
+    }
+}
+.right-bio img{
+    width: 350px;
+    height: 410px;
+    margin-top: 90px;
+    margin-left: -150px;
+    border-radius: 18px;
+    border: 3px solid white;
+    border-style: dashed;
+}
+.social button{
+    cursor: pointer;
+    color:white;
+    background: var(--blue);
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px 17px;
+    margin-bottom: 8px;
+    white-space: wrap;
+}
+.social button:hover{
+    background: rgb(226, 174, 40);
+}
+
+@media (max-width:390px) {
+    .nav-icon{
+        display: block;
+        margin-left:105px ;
+
+    }
+    .nav-con{
+    display: none;
+}
+.header-con{
+    padding:20px 10px ;
+}
+.logo{
+margin-right: 200px;
+}
+.con{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.right-bio{
+    width: 40%;
+}
+.left-bio{
+    width: 40%;
+    font-size: 20px;
+}
+.bio-desc{
+    margin-top: 20px;
+    width: 90%;
+    text-align: justify;
+}
+
+}
+
